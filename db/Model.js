@@ -3,7 +3,7 @@ var ObjectId=mongoose.Schema.Types.ObjectId;
 module.exports={
     User:{
         username:{type:String,required:true},
-        password:{type:String,required:true},
+        pwd:{type:String,required:true},
         email:{type:String},
         avatar:{type:String}
     },

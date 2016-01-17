@@ -15,15 +15,15 @@ router.post('/reg', function(req, res, next) {
   user.pwd=md5(user.pwd)
   //console.log(user)
   console.log(new Model("User"))
-  new Model("Users")(user).save(function(err,doc){
-    console.log(err)
+  new Model("User")(user).save(function(err,doc){
+    console.log(err,"err")
     if(err){
       return res.redirect("back")
     }else{
       return res.redirect("/")
     }
   })
-  res.render("users/reg",{title:"注册页面"})
+  //res.render("users/reg",{title:"注册页面"})
 });
 router.get('/login', function(req, res, next) {
   res.render("users/login",{title:"登录页面"})

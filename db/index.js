@@ -4,7 +4,7 @@ var mongoose=require("mongoose"),
     models=require("./Model");
 mongoose.connect(settings.url)
 console.log(models.User)
-mongoose.model("Users",mongoose.Schema(models.User))
+mongoose.model("User",mongoose.Schema(models.User))
 mongoose.model("Article",mongoose.Schema(models.Article))
 global.Model=function(type){
     console.log(mongoose.model(type))
